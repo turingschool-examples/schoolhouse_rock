@@ -53,3 +53,13 @@ class SchoolTest < Minitest::Test
     assert_equal '12:00', school2.end_time
   end
 end
+
+
+#Iteration 3
+#full full time
+def test_is_full_time
+  def is_full_time?
+   if @hours > 4 == true
+   end
+
+end
