@@ -8,10 +8,11 @@ attr_reader :start_time,
     @start_time = start_time
     @hours_in_school_day = hours_in_school_day
     @student_names = []
+
   end
 
   def add_student_name(name)
-    student_names << name
+    @student_names << name
   end
 
   def end_time
@@ -22,6 +23,23 @@ attr_reader :start_time,
   with_zeros = end_hour * 100
   to_string = with_zeros.to_s
   end_time = to_string.insert(-3, ":")
+
+  end
+
+  def full_time?
+    if @hours_in_school_day >= 4
+      true
+    else
+      false
+    end
+  end
+
+  def standard_school_names
+    standard_names = []
+    @student_names.each do |name|
+      standard_names << name.capitalize
+    end
+    return standard_names
   end
 
 end
