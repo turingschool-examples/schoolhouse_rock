@@ -32,4 +32,23 @@ class School
   def standard_student_names
     student_names.map! { |student_name| student_name.capitalize }
   end
+
+  def convert_end_time_to_clock_time
+    if end_time.to_1 < 13
+      end_time
+    else
+    time_key {  '13:00' => '1:00',
+                '14:00' => '2:00',
+                '15:00' => '3:00',
+                '16:00' => '4:00',
+                '17:00' => '5:00',
+                '18:00' => '6:00',
+                '19:00' => '7:00'
+                '14:00' => '2:00',
+                '15:00' => '3:00',
+                '16:00' => '4:00',
+                '17:00' => '5:00',
+                '18:00' => '6:00',}
+  end
+
 end
