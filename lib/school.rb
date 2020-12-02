@@ -35,7 +35,12 @@ class School
     time_str = self.end_time
     time_arr = time_str.split(':')
     time_int = time_arr[0].to_i
-    "#{time_int - 12}:00"
+    # handle end-time in clock range
+    if time_int <= 12
+      "#{time_int}:00"
+    else
+      "#{time_int - 12}:00"
+    end
   end
 
 end
