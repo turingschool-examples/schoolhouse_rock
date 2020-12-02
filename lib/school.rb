@@ -19,7 +19,14 @@ class School
     "#{(@start_time.to_i + @hours_in_school_day)}:00"
   end
 
-  def add_student_name(student_names)
-    student_names.push(student_names)
+  def add_student_names(student_names)
+    student_names << @student_names
+  end
+
+  def is_full_time?
+    if @hours_in_school_day > 4
+      true
+    end
   end
 end
+school = School.new('9:00', 7)
