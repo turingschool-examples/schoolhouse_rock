@@ -89,10 +89,10 @@ class SchoolTest < Minitest::Test
     school2 = School.new('9:00', 3)
 
     assert_equal "4:00 PM", school1.ante_meridiem
+    assert_equal "12:00 PM", school2.ante_meridiem
   end
 
   def test_it_can_convert_end_time_to_clock_time
-    skip
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
