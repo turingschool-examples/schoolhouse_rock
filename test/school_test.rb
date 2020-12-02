@@ -64,7 +64,7 @@ class SchoolTest < Minitest::Test
 
     standard_student_names = ["Aurora", "Tim", "Megan"]
 
-    assert_equal standard_student_names, school.standard_student_name
+    assert_equal standard_student_names, school.standard_student_names
   end
 
   def test_it_can_convert_end_time_to_clock_time

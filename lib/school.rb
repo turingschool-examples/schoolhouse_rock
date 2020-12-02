@@ -25,10 +25,10 @@ class School
       return true
     else
       return false
-    end 
+    end
   end
 
-  def standard_student_name
+  def standard_student_names
     standard_student_name = @student_names.map do |name|
       name.capitalize
     end
