@@ -19,4 +19,10 @@ class School
   def is_full_time?
     @start_time.to_i > 4
   end
+
+  def standard_student_names
+    @student_names.map do |student|
+      student.capitalize 
+    end
+  end
 end
