@@ -1,5 +1,7 @@
 class School
-  attr_reader :start_time, :hours_in_school_day, :student_names
+  attr_reader :start_time,
+              :hours_in_school_day,
+              :student_names
 
   def initialize(start_time, hours_in_school_day)
     @start_time = start_time
@@ -9,5 +11,13 @@ class School
 
   def add_student_name(name)
     @student_names << name
+  end
+
+  def total_time
+    hours_in_school_day + start_time.to_i
+  end
+
+  def end_time
+    "#{total_time}:00"
   end
 end

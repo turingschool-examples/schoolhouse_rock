@@ -39,11 +39,16 @@ class SchoolTest < Minitest::Test
     assert_equal ['Aurora', 'tim', 'megan'], school.student_names
   end
 
-  def test_it_can_calculate_end_time
-    skip
+  def test_it_can_add_total_time
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
+    assert_equal 16, school1.total_time
+    assert_equal 12, school2.total_time
+  end
 
+  def test_it_can_calculate_end_time
+    school1 = School.new('9:00', 7)
+    school2 = School.new('9:00', 3)
     assert_equal '16:00', school1.end_time
     assert_equal '12:00', school2.end_time
   end
