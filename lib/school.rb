@@ -12,9 +12,5 @@ def add_student_name(name)
   @student_names << name
 end
 
+
 end
-
-
-School.add_student_name("Aurora")
-School.add_student_name("Tim")
-School.add_student_name("Megan")
