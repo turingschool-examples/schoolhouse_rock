@@ -5,7 +5,7 @@ class School
     @start_time = start
     @hours_in_school_day = hours
     @student_names = []
-    @end_time = 0
+    @end_time = (@start_time.to_i + @hours_in_school_day)
   end
 
   def add_student_name(name)
@@ -13,8 +13,7 @@ class School
   end
 
   def end_time
-    end_time = (@start_time.to_i + @hours_in_school_day)
-    "#{end_time}:00"
+    "#{@end_time}:00"
   end
 
   def is_full_time?
@@ -27,4 +26,12 @@ class School
     end
   end
 
+  def convert_end_time_to_clock_time
+    if @end_time > 12
+      @clock_time = @end_time - 12
+      "#{@clock_time}:00"
+    else
+      end_time
+    end
+  end
 end
