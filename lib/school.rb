@@ -26,4 +26,8 @@ class School
     # Create end time string
     end_time = "#{end_hour}:#{split_start_time[1]}"
   end
+
+  def is_full_time?
+    @hours_in_school_day > 4
+  end
 end
