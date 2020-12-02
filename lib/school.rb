@@ -20,4 +20,8 @@ class School
   def student_names
     @names
   end
+
+  def add_student_name(name)
+    @names << name
+  end
 end
