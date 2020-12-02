@@ -19,4 +19,8 @@ class School
     end_time = calculated_time.to_s + ":00"
     return end_time
   end
+
+  def is_full_time?
+    return true if @hours_in_school_day > 4 else false   
+  end
 end
