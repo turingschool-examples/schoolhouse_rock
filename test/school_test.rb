@@ -59,7 +59,7 @@ class SchoolTest < Minitest::Test
     assert_equal true, school.is_full_time?
   end
 
-  def test_it_makes_first_letter_big
+  def test_stadard_student_names_makes_first_letter_big
     school = School.new('9:00', 7)
 
     school.add_student_name('Aurora')
