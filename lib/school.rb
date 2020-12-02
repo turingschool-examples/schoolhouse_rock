@@ -28,5 +28,12 @@ class School
       true
     end
   end
+
+  def convert_end_time_to_clock_time
+    if (@start_time.to_i + @hours_in_school_day) > 12
+      "#{(@start_time.to_i + @hours_in_school_day) - 12}:00"
+    else
+      "#{(@start_time.to_i + @hours_in_school_day)}:00"
+    end
+  end
 end
-school = School.new('9:00', 7)
