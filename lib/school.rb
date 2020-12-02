@@ -28,8 +28,8 @@ class School
 
   def convert_end_time_to_clock_time
     if @end_time > 12
-      @clock_time = @end_time - 12
-      "#{@clock_time}:00"
+      clock_time = @end_time - 12
+      "#{clock_time}:00"
     else
       end_time
     end
