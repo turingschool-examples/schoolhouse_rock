@@ -13,4 +13,8 @@ class School
   def student_names
     @student_names = []
   end
+
+  def add_student_name(name)
+    @name = []
+  end
 end
