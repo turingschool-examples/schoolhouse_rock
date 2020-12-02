@@ -17,7 +17,8 @@ class School
   end
 
   def end_time
- (hours_in_school_day.to_i + start_time.to_i)
+ time = (hours_in_school_day.to_i + start_time.to_i)
+ # Time.strptime(time, "%I:%M %P").strftime("%H:%M")
   end
 
    def is_full_time?
