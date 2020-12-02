@@ -13,6 +13,10 @@ class School
   end
 
   def end_time
-    (@start_time.to_i + @hours_in_school_day).to_s + ":00" 
+    (@start_time.to_i + @hours_in_school_day).to_s + ":00"
+  end
+
+  def is_full_time?
+    @start_time.to_i > 4
   end
 end
