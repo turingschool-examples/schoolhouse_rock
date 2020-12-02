@@ -34,6 +34,11 @@ class School
 
   def convert_end_time_to_clock_time
   clock_time = end_time().to_i % 12
-    return "#{clock_time}:00"
+    if clock_time == "0:00"
+      return "12:00"
+    else
+      return "#{clock_time}:00"
+    end
   end
+
 end
