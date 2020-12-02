@@ -17,7 +17,7 @@ class School
     # Separate the time on a colon
     split_start_time = @start_time.split(':')
 
-    # Convert start
+    # Get start hour
     start_hour = split_start_time[0].to_i
 
     # Calculate end hour
@@ -25,6 +25,23 @@ class School
 
     # Create end time string
     end_time = "#{end_hour}:#{split_start_time[1]}"
+  end
+
+  def convert_end_time_to_clock_time
+    # Separate the time on a colon
+    split_end_time = end_time.split(':')
+
+    # Get end hour
+    end_hour_24 = split_end_time[0].to_i
+
+    # Convert end hour to 12hr format (it's normally 24hr format)
+    end_hour_12 = (end_hour_24 <= 12) ? end_hour_24 : end_hour_24 % 12
+
+    converted_end_time = "#{end_hour_12}:#{split_end_time[1]}"
+  end
+
+  private def get_time_array_from_string
+
   end
 
   def is_full_time?
