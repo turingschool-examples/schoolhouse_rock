@@ -36,5 +36,12 @@ class School
     #time.hour
     time.strftime("%l:%M").strip
 
+    #if you want me to use if else statements (:
+    time = end_time.to_i
+    if time > 12
+      time = time - 12
+    end
+    "#{time}:00"
+
   end
 end
