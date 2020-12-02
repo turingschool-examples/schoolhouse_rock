@@ -46,4 +46,9 @@ class SchoolTest < Minitest::Test
     assert_equal '16:00', school1.end_time
     assert_equal '12:00', school2.end_time
   end
+
+  def test_is_full_time_return_state
+    school = School.new('9:00', 7)
+    assert_equal true, school.is_full_time?
+  end
 end
