@@ -31,4 +31,9 @@ class School
     end
     return standard_student_names
   end
+
+  def convert_end_time_to_clock_time
+  clock_time = end_time().to_i % 12
+    return "#{clock_time}:00"
+  end
 end
