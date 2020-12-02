@@ -40,10 +40,6 @@ class School
     converted_end_time = "#{end_hour_12}:#{split_end_time[1]}"
   end
 
-  private def get_time_array_from_string
-
-  end
-
   def is_full_time?
     @hours_in_school_day > 4
   end
