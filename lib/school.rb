@@ -33,4 +33,17 @@ class School
     names
 
   end
+
+  def convert_end_time_to_clock_time
+    int_start_time = @start_time.to_i
+    am_pm_calc_number = int_start_time + @hours_in_school_day
+    if am_pm_calc_number >= 13
+      "#{am_pm_calc_number - 12}:00"
+    else
+      "#{am_pm_calc_number}:00"
+    end
+
+  end
+
+
 end
