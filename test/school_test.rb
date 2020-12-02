@@ -5,14 +5,14 @@ require './lib/school'
 class SchoolTest < Minitest::Test
   #Iteration 1 Tests:
   def test_it_exists
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     assert_instance_of School, school
   end
 
   def test_it_has_start_time
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     assert_equal '9:00', school.start_time
