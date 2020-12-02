@@ -26,7 +26,7 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_starts_with_no_student_names
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     assert_equal [], school.student_names
@@ -45,11 +45,13 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_can_calculate_end_time
-    skip
+    # skip
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
     assert_equal '16:00', school1.end_time
     assert_equal '12:00', school2.end_time
   end
+
+  
 end
