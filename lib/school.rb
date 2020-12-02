@@ -11,6 +11,7 @@ class School
   end
 
   def end_time
-    endtime = "#{(9+hours_in_school_day)}:00"
+    int_start_time = @start_time.to_i
+    endtime = "#{(int_start_time+hours_in_school_day)}:00"
   end
 end
