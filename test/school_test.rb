@@ -55,7 +55,9 @@ class SchoolTest < Minitest::Test
 
   def test_it_can_check_full_time
     school = School.new('9:00', 7)
+    school1 = School.new("7:00",3)
     assert_equal true, school.is_full_time?
+    assert_equal false, school1.is_full_time? 
 
   end
 
@@ -69,6 +71,8 @@ class SchoolTest < Minitest::Test
 
   def test_convert_end_time_to_clock_time
     school = School.new('9:00', 7)
+    school1 = School.new("7:00", 4)
     assert_equal "4:00", school.convert_end_time_to_clock_time
+    assert_equal "11:00", school1.convert_end_time_to_clock_time
   end
 end
