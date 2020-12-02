@@ -58,4 +58,16 @@ class SchoolTest < Minitest::Test
 
     assert_equal true, school.is_full_time?
   end
+
+  def test_it_makes_first_letter_big
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+
+    expected = ["Aurora", "Tim", "Megan"]
+
+    assert_equal expected, school.standard_student_names
+  end
 end
