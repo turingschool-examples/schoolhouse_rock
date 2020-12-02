@@ -26,8 +26,16 @@ class School
     time = self.start_time.to_i + self.total_hours
     "#{time}:00"
   end
-  
 
+  def is_full_time?
+    self.total_hours >=4
+  end
 
+  def standard_student_names()
+    standard_names = []
+    self.student_names.each do |name|
+      standard_names << name.capitalize!
+    end
+  end
 
 end
