@@ -14,8 +14,7 @@ class School
   end
 
   def end_time
-   time = @start_time.to_i + @hours_in_school_day.to_i
-   "#{time}:00"
+   (@start_time.to_i + @hours_in_school_day).to_s << ":00"
   end
 
   def is_full_time?
@@ -23,15 +22,12 @@ class School
   end
 
   def standard_student_names
-    @student_names.map do |name|
-      name.capitalize
-    end
+    @student_names.map(&:capitalize)
   end
 
   def convert_end_time_to_clock_time
     if end_time.to_i > 12 
-    time = end_time.to_i - 12
-    "#{time}:00"
+    (end_time.to_i - 12).to_s << ":00"
     end
   end
 end
