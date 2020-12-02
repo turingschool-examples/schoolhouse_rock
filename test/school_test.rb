@@ -58,13 +58,14 @@ class SchoolTest < Minitest::Test
   def test_school_is_full_time
 
     school1 = School.new('6:00', 3)
-    school2 = School.new('10:00', 4)
+    school2 = School.new('10:00', 5)
 
     refute school1.is_full_time?
     assert school2.is_full_time?
   end
 
   def test_standard_student_names
+
     school = School.new('9:00', 7)
 
     school.add_student_name('Aurora')
@@ -75,19 +76,16 @@ class SchoolTest < Minitest::Test
   end
 
   def test_end_time_to_standard_time
+
     school1 = School.new('8:00', 6)
-    school2 = School.new('8:00', 4)
+    school2 = School.new('8:00', 3)
+    
 
 
     end_time1 = '2:00'
-    end_time2 = '12:00'
-
-
+    end_time2 = '11:00'
 
     assert_equal end_time1, school1.convert_end_time_to_clock_time
     assert_equal end_time2, school2.convert_end_time_to_clock_time
-
-
-
   end
 end
