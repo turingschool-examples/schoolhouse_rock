@@ -1,3 +1,5 @@
+require 'time'
+
 class School
   attr_reader :start_time,
               :hours_in_school_day,
@@ -11,5 +13,9 @@ class School
 
   def add_student_name(student)
     @student_names << student
+  end
+
+  def end_time
+    "#{(@hours_in_school_day + @start_time.to_i)}:00"
   end
 end
