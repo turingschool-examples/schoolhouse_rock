@@ -16,7 +16,7 @@ class School
   end
 
   def is_full_time?
-    if @hours_in_school_day >= 4
+    if @hours_in_school_day > 4
       true
     else
       false
@@ -28,19 +28,22 @@ class School
     names = []
     @student_names.each do |name|
       names << name.capitalize
-
+      # could you just use capitalize! method instead?
     end
     names
 
   end
 
   def convert_end_time_to_clock_time
+
     int_start_time = @start_time.to_i
-    am_pm_calc_number = int_start_time + @hours_in_school_day
-    if am_pm_calc_number >= 13
-      "#{am_pm_calc_number - 12}:00"
+    clock_time = int_start_time + @hours_in_school_day
+    if clock_time > 24
+      "not enough hours in the day"
+    elsif clock_time >= 13
+      "#{clock_time - 12}:00"
     else
-      "#{am_pm_calc_number}:00"
+      "#{clock_time}:00"
     end
 
   end
