@@ -1,4 +1,3 @@
-require "Time"
 class School
   attr_reader:start_time,
              :hours_in_school_day,
