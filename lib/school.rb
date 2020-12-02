@@ -23,4 +23,12 @@ class School
       false
     end
   end
+
+  def standard_student_names
+    standard_student_names = []
+    @student_names.each do |name|
+      standard_student_names.push(name.downcase.capitalize!)
+    end
+    return standard_student_names
+  end
 end
