@@ -58,4 +58,6 @@ class SchoolTest < Minitest::Test
 
     assert_equal true, school.is_full_time?
   end
+
+  
 end

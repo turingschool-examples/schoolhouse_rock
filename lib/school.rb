@@ -19,4 +19,12 @@ class School
     time_array[0] = eod
     time_array.join
   end
+
+  def is_full_time?
+    if hours_in_school_day > 4
+      full_time = true
+    else
+     full_time = false
+   end
+  end
 end
