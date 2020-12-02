@@ -1,3 +1,4 @@
+require 'time'
 class School
   attr_reader :start_time,
               :hours_in_school_day,
@@ -26,5 +27,14 @@ class School
     @student_names.map do |student|
       student.capitalize
     end
+  end
+
+  def convert_end_time_to_clock_time
+
+    time = Time.parse(end_time)
+    #time.hour
+    time.strftime("%l:%M").strip
+    #end_time.to_datetime.strftime('%H:%M')
+    #end_time_converted = new DateTime(end_time)
   end
 end
