@@ -30,6 +30,10 @@ class School
   end
 
   def convert_end_time_to_clock_time
-    "#{Time.parse("#{end_time.to_i}:00").strftime("%l")}:00".strip
+    if end_time.to_i > 12
+      "#{end_time.to_i - 12}:00"
+    else
+      "#{end_time.to_i}:00"
+    end
   end
 end
