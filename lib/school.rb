@@ -14,6 +14,10 @@ class School
 
   def end_time
   time = @start_time.to_i + @hours_in_school_day
-  "#{time}:00"
+    if time > 24
+    "That can't be right!"
+    else
+      "#{time}:00"
+    end
   end
 end
