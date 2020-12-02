@@ -42,6 +42,14 @@ class School
     end
   end
 
+  def ante_meridiem
+    if military_time >= 13
+      convert_end_time_to_clock_time + " P.M."
+    else
+      convert_end_time_to_clock_time + " A.M."
+    end
+  end
+
   def convert_end_time_to_clock_time
     clock_time.to_s + ":00"
   end
