@@ -6,4 +6,8 @@ class School
     @start_time = start_time
     @student_names = []
   end
+
+  def add_student_name(name)
+    @student_names.push(name)
+  end
 end
