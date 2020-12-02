@@ -24,14 +24,20 @@ class School
   end
 
   def standard_student_names
+    #is there a more neat way to to write this? It feels sloppy or redundant
     standard_names = []
     @student_names. each do |student|
-
       standard_names << student.capitalize
     end
     standard_names
   end
 
   def convert_end_time_to_clock_time
-
+    end_of_day = @start_time.to_i + @hours_in_school_day
+    if end_of_day > 12
+      "#{end_of_day - 12}:00"
+    else
+      "#{end_of_day}:00"
+    end 
+  end
 end
