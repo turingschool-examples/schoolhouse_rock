@@ -18,4 +18,8 @@ class School
   def end_time
     "#{(@hours_in_school_day + @start_time.to_i)}:00"
   end
+
+  def is_full_time?
+    @hours_in_school_day > 4
+  end
 end
