@@ -14,4 +14,24 @@ class School
     end_of_day = @start_time.to_i + @hours_in_school_day
     return "#{end_of_day}:00"
   end
+
+  def is_school_full_time?
+    if @hours_in_school_day > 4
+      true
+    else
+      false
+    end
+  end
+
+  def standard_student_names
+    standard_names = []
+    @student_names. each do |student|
+
+      standard_names << student.capitalize
+    end
+    standard_names
+  end
+
+  def convert_end_time_to_clock_time
+
 end
