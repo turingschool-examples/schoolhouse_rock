@@ -54,4 +54,15 @@ class SchoolTest < Minitest::Test
     assert school1.is_full_time?
     refute school2.is_full_time?
   end
+
+  def test_capitalized_student_names
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+
+    standard_names = ['Aurora', 'Tim', 'megan']
+    assert_equal standard_names, school.standard_student_names
+  end
 end
