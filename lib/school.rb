@@ -1,10 +1,12 @@
 class School
   attr_reader :time,
-              :hours
+              :hours,
+              :names
 
   def initialize(time, hours)
     @time = time
     @hours = hours
+    @names = []
   end
 
   def start_time
@@ -13,5 +15,9 @@ class School
 
   def hours_in_school_day
     @hours
+  end
+
+  def student_names
+    @names
   end
 end
