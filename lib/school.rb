@@ -40,6 +40,4 @@ class School
     end
     capitalize_names
   end
-
-
 end
