@@ -21,6 +21,13 @@ class School
   end
 
   def is_full_time?
-    return true if @hours_in_school_day > 4 else false   
+    return true if @hours_in_school_day > 4 else false
+  end
+
+  def standard_student_name
+    standard_student_name = @student_names.map do |name|
+      name.capitalize
+    end
+    return standard_student_name
   end
 end
