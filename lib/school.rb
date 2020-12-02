@@ -15,6 +15,6 @@ end
 end
 
 
-school.add_student_name("Aurora")
-school.add_student_name("Tim")
-school.add_student_name("Megan")
+School.add_student_name("Aurora")
+School.add_student_name("Tim")
+School.add_student_name("Megan")
