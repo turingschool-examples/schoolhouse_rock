@@ -17,5 +17,7 @@ class School
   end
 
   def end_time
-  end 
+    math = @hours_in_school_day.to_i + @start_time.to_i
+    "#{math}:00"
+  end
 end
