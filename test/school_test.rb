@@ -72,4 +72,11 @@ class SchoolTest < Minitest::Test
     assert_equal expected, school.standard_school_names
   end
 
+#Iteration 4
+  def test_convert_end_to_clock_time
+  school = School.new('9:00', 9)
+  expected = "6:00"
+  assert_equal expected, school.convert_end_to_clock_time
+  end
+
 end
