@@ -19,7 +19,7 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_has_hours_in_school_day
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     assert_equal 7, school.hours_in_school_day
@@ -34,7 +34,7 @@ class SchoolTest < Minitest::Test
 
   #Iteration 2 Tests:
   def test_it_can_add_student_names
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     school.add_student_names('Aurora')
@@ -60,7 +60,7 @@ class SchoolTest < Minitest::Test
   end
 
   def test_standard_student_names
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     school.add_student_names('Aurora')
