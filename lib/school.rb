@@ -21,7 +21,11 @@ class School
   end
 
   def is_full_time?
-    return true if @hours_in_school_day > 4 else false
+    if @hours_in_school_day > 4
+      return true
+    else
+      return false
+    end 
   end
 
   def standard_student_name
@@ -29,5 +33,11 @@ class School
       name.capitalize
     end
     return standard_student_name
+  end
+
+  def convert_end_time_to_clock_time
+    converted_start_time = @start_time.to_i
+    calculated_clock_time = (converted_start_time + @hours_in_school_day) - 12
+    end_time_clock_time = calculated_clock_time.to_s + ":00"
   end
 end
