@@ -1,3 +1,4 @@
+require "Time"
 class School
   attr_reader:start_time,
              :hours_in_school_day,
@@ -17,12 +18,17 @@ class School
   end
 
   def is_full_time?
-    @start_time.to_i > 4
+    @hours_in_school_day > 4
   end
 
   def standard_student_names
     @student_names.map do |student|
-      student.capitalize 
+      student.capitalize
     end
+  end
+
+  def convert_end_time_to_clock_time
+    
+  "#{end_time.to_i - 12}:00"
   end
 end
