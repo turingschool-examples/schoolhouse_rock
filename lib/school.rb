@@ -10,6 +10,12 @@ class School
     @full_time = true
   end
 
+  def convert_end_time_to_clock_time
+    time = @start_time.to_i + @hours_in_school_day
+    end_time = time - 12
+    "#{end_time}:00"
+  end
+
   def standard_student_names
     @student_names.map do |name|
       name.capitalize
