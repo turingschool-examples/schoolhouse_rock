@@ -7,7 +7,7 @@ require '../lib/school'
 class SchoolTest < Minitest::Test
   #Iteration 1 Tests:
   def test_it_exists
-    skip
+
     school = School.new('9:00', 7)
 
     assert_instance_of School, school
@@ -48,7 +48,7 @@ require 'pry'; binding.pry
   end
 
   def test_it_can_calculate_end_time
-    skip
+
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
