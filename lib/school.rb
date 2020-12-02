@@ -11,15 +11,7 @@ class School
   end
 
   def end_time
-  end_of_day = @start_time.to_i + @hours_in_school_day
-  if end_of_day > 12
-    "#{end_of_day - 12}:00"
-  else
-    "#{end_of_day}:00"
-  end  
-
-    conver start_time.to_i, add duration, if over 12, subtract 12, put that number in front of '#{num}':00' using interpolation
+    end_of_day = @start_time.to_i + @hours_in_school_day
+    return "#{end_of_day}:00"
   end
-
-
 end
