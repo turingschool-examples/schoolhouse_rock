@@ -62,7 +62,7 @@ class SchoolTest < Minitest::Test
     school.add_student_name('tim')
     school.add_student_name('megan')
 
-    standard_names = ['Aurora', 'Tim', 'megan']
+    standard_names = ['Aurora', 'Tim', 'Megan']
     assert_equal standard_names, school.standard_student_names
   end
 end
