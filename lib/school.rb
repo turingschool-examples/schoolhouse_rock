@@ -30,4 +30,8 @@ class School
       name.capitalize
     end
   end
+
+  def convert_end_time_to_clock_time
+    "#{total_time - 12}:00"
+  end
 end
