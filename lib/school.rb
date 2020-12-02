@@ -27,4 +27,12 @@ class School
      full_time = false
    end
   end
+
+  def standard_student_names
+    standard_names = []
+    student_names.each do |name|
+    standard_names << name.capitalize
+    end
+    standard_names
+  end
 end
