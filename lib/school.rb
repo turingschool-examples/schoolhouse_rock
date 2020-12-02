@@ -31,4 +31,11 @@ class School
     end
   end
 
+  def convert_end_time_to_clock_time
+    time_str = self.end_time
+    time_arr = time_str.split(':')
+    time_int = time_arr[0].to_i
+    "#{time_int - 12}:00"
+  end
+
 end
