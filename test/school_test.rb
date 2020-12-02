@@ -45,11 +45,31 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_can_calculate_end_time
-    # skip
+    skip
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
     assert_equal '16:00', school1.end_time
     assert_equal '12:00', school2.end_time
   end
+
+
+#Iteration 3
+
+  def test_if_full_time
+    school = School.new('9:00', 7)
+    school.is_full_time(7)
+
+    assert_equal true, school.is_full_time(7)
+  end
+
+# pry(main)> school.is_full_time?
+# #=> true
+#
+# pry(main)> school.add_student_name('Aurora')
+# pry(main)> school.add_student_name('tim')
+# pry(main)> school.add_student_name('megan')
+#
+# pry(main)> school.standard_student_names
+# #=> ["Aurora", "Tim", "Megan"]
 end
