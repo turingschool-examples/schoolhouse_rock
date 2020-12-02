@@ -12,4 +12,8 @@ class School
   def add_student_name(name)
     student_names << name
   end
+
+  def end_time
+    @start_time += @hours_in_school_day
+  end
 end
