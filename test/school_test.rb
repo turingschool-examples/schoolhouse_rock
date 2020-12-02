@@ -32,7 +32,7 @@ class SchoolTest < Minitest::Test
     assert_equal [], school.student_names
   end
 
-  #Iteration 2 Tests:
+  # Iteration 2 Tests:
   def test_it_can_add_student_names
 
     school = School.new('9:00', 7)
@@ -62,5 +62,19 @@ class SchoolTest < Minitest::Test
 
     refute school1.is_full_time?
     assert school2.is_full_time?
+  end
+
+  def test_standard_student_names
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+    names = ["Aurora", "Tim", "Megan"]
+    assert_equal names, school.standard_student_names
+  end
+
+  def test_end_time_to_standard_time
+
   end
 end
