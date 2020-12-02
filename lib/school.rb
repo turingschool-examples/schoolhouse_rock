@@ -33,5 +33,13 @@ class School
     true if @hours > 4
   end
 
+  def standard_student_names
+    capitalize_names = []
+    @names.each do |name|
+      capitalize_names << name.capitalize
+    end
+    capitalize_names
+  end
+
 
 end
