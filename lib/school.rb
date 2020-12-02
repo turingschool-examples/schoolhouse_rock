@@ -24,4 +24,14 @@ class School
   def add_student_name(name)
     @names << name
   end
+
+  def end_time
+    @hours.to_s + @time
+  end
+
+  def is_full_time?
+    true if @hours > 4
+  end
+
+
 end
